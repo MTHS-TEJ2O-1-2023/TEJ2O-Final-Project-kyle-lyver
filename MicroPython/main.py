@@ -56,7 +56,7 @@ while True:
         # We've received a signal, so reset waiting time
         started_to_wait = running_time()
     # Finally, if micro:bit was shaken while all the above was going on...
-    if microbit.button_a.is_pressed() and microbit.button_b.is_pressed():
+    if pin_logo.is_touched():
         # ... display the message on LEDs and serial console
         print(message)
         display.scroll(message)
